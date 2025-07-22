@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+        @apply bg-gradient-to-br from-forest-50 to-ocean-50 min-h-screen;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg;
+    }
+
+    .metric-card {
+        @apply card p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
+    }
+
+    .chart-container {
+        @apply card p-4 h-full;
+    }
+
+    .status-indicator {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    }
+
+    .status-online {
+        @apply bg-forest-100 text-forest-800;
+    }
+
+    .status-warning {
+        @apply bg-sunset-100 text-sunset-800;
+    }
+
+    .status-offline {
+        @apply bg-gray-100 text-gray-800;
+    }
+}
